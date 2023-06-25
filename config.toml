@@ -1,4 +1,10 @@
 baseURL = 'http://nhattam.netlify.app'
 languageCode = 'en-us'
-title = 'HTX Nhất Tâm'
+title = 'HTXNN Nhất Tâm'
 theme = 'netlify-basic'
+
+[params]
+address = 'Quốc lộ 60, Khóm 5, Phường 8, TP. Trà Vinh, Tỉnh Trà Vinh'
+phone = '0703222259'
+email = 'htxnnnhattam@gmail.com'
+facebook = 'fb/htxnnNhatTam'

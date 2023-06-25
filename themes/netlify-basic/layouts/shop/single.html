@@ -1,0 +1,76 @@
+{{ define "main" }}
+    
+    <div class="slider-area">
+        
+    </div>
+    <div class="banner-area hm1-banner pt-130 pb-107">
+        
+    </div>
+    <div class="product-area pb-80">
+        <div class="container">
+            <div class="section-title text-center mb-20">
+                <h2>Chi tiết</h2>
+            </div>
+            <div class="product-tab-list text-center mb-60 nav product-menu-mrg" role="tablist">
+                <a href="#home1" data-toggle="tab" role="tab" aria-selected="true" aria-controls="home1">
+                    <h4> </h4>
+                </a>
+                <a class="active" href="#home2" data-toggle="tab" role="tab" aria-selected="false" aria-controls="home2">
+                    <h4> Chi tiết sản phẩm </h4>
+                </a>
+                <a href="#home3" data-toggle="tab" role="tab" aria-selected="false" aria-controls="home3">
+                    <h4>  </h4>
+                </a>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active" id="home1" role="tabpanel">
+                    <div class="col-md-12 col-lg-12 col-xl-12">
+                        <div class="product-wrapper mb-45">
+                            <div class="product-img">
+                                <a href="#">
+                                    <img src="{{ .Params.image }}" alt="">
+                                </a>
+                                <div class="product-action">
+                                    <div class="product-action-style">
+                                        <a class="action-plus" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                            <i class="ti-plus"></i>
+                                        </a>
+                                        <a class="action-heart" title="Wishlist" href="#">
+                                            <i class="ti-heart"></i>
+                                        </a>
+                                        <a class="action-cart" title="Add To Cart" href="#">
+                                            <i class="ti-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-content text-center">
+                                <h4><a href="#">{{ .Params.title }}</a></h4>
+                                <div class="product-rating">
+                                    <i class="ion-ios-star"></i>
+                                    <i class="ion-ios-star"></i>
+                                    <i class="ion-ios-star-outline"></i>
+                                    <i class="ion-ios-star-outline"></i>
+                                    <i class="ion-ios-star-outline"></i>
+                                </div>
+                                <div class="product-price">
+                                    <span>$25.00</span>
+                                </div>
+                                <h4>{{ .Params.description }}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane" id="home2" role="tabpanel">
+                </div>
+
+                <div class="tab-pane" id="home3" role="tabpanel">
+                </div>
+
+            </div>
+        </div>
+    </div>
+        
+
+{{ end }}
