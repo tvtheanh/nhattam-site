@@ -12,21 +12,21 @@
                 <h2>{{ .Title }}</h2>
             </div>
             <div class="product-tab-list text-center mb-60 nav product-menu-mrg" role="tablist">
-                <a class="active" href="#home1" data-toggle="tab" role="tab" aria-selected="true" aria-controls="home1">
-                    <h4> Bán chạy</h4>
+                <a data-toggle="tab" role="tab" aria-selected="true" aria-controls="home2">
+                    <h4> </h4>
                 </a>
-                <a href="#home2" data-toggle="tab" role="tab" aria-selected="false" aria-controls="home2">
-                    <h4> Mới nhất </h4>
+                <a class="active" href="#home1"  data-toggle="tab" role="tab" aria-selected="false" aria-controls="home1">
+                    <h4> Pet House </h4>
                 </a>
-                <a href="#home3" data-toggle="tab" role="tab" aria-selected="false" aria-controls="home3">
-                    <h4> Sale Off </h4>
+                <a data-toggle="tab" role="tab" aria-selected="false" aria-controls="home3">
+                    <h4> </h4>
                 </a>
             </div>
             <div class="tab-content">
                 <div class="tab-pane active" id="home1" role="tabpanel">
                     <div class="row">
                         {{ range .Pages }}
-                            {{ if in .Params.category "special"}}
+                            {{ if in .Params.category "pet-special"}}
                             <div class="col-md-6 col-lg-4 col-xl-3">
                                 <div class="product-wrapper mb-45">
                                     <div class="product-img">
@@ -66,7 +66,7 @@
                             {{ end }}
                         {{ end }}
                         {{ range .Pages }}
-                            {{ if in .Params.category "best"}}
+                            {{ if in .Params.category "pethouse"}}
                             <div class="col-md-6 col-lg-4 col-xl-3">
                                 <div class="product-wrapper mb-45">
                                     <div class="product-img">
@@ -113,7 +113,7 @@
                     <h4> </h4>
                 </a>
                 <a  class="active" href="#home2" data-toggle="tab" role="tab" aria-selected="false" aria-controls="home2">
-                    <h4> Mới nhất </h4>
+                    <h4> Nhóm túi xách </h4>
                 </a>
                 <a role="tab" aria-selected="false" aria-controls="home3">
                     <h4> </h4>
@@ -123,7 +123,7 @@
                 <div class="tab-pane active" id="home2" role="tabpanel">
                     <div class="row">
                         {{ range .Pages }}
-                            {{ if in .Params.category "special"}}
+                            {{ if in .Params.category "bag-special"}}
                             <div class="col-md-6 col-lg-4 col-xl-3">
                                 <div class="product-wrapper mb-45">
                                     <div class="product-img">
@@ -163,7 +163,104 @@
                             {{ end }}
                         {{ end }}
                         {{ range .Pages }}
-                            {{ if in .Params.category "new"}}
+                            {{ if in .Params.category "handbag"}}
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                                <div class="product-wrapper mb-45">
+                                    <div class="product-img">
+                                        <a href="{{ .RelPermalink }}">
+                                            <img src="{{ .Params.image }}" alt="">
+                                        </a>
+                                        <div class="product-action">
+                                            <div class="product-action-style">
+                                                <a class="action-plus" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                    <i class="ti-plus"></i>
+                                                </a>
+                                                <a class="action-heart" title="Wishlist" href="{{ .RelPermalink }}">
+                                                    <i class="ti-heart"></i>
+                                                </a>
+                                                <a class="action-cart" title="Add To Cart" href="{{ .RelPermalink }}">
+                                                    <i class="ti-shopping-cart"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-content text-center">
+                                        <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+                                        <div class="product-rating">
+                                            <i class="ion-ios-star"></i>
+                                            <i class="ion-ios-star"></i>
+                                            <i class="ion-ios-star"></i>
+                                            <i class="ion-ios-star"></i>
+                                            <i class="ion-ios-star"></i>
+                                        </div>
+                                        <div class="product-price">
+                                            <span class="old">{{ .Params.old_price }} </span>
+                                            <span>{{ .Params.price }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{ end }}
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            <div class="product-tab-list text-center mb-60 nav product-menu-mrg" role="tablist">
+                <a role="tab" aria-selected="true" aria-controls="home1">
+                    <h4> </h4>
+                </a>
+                <a  class="active" href="#home3" data-toggle="tab" role="tab" aria-selected="false" aria-controls="home3">
+                    <h4> Hàng gia dụng </h4>
+                </a>
+                <a role="tab" aria-selected="false" aria-controls="home3">
+                    <h4> </h4>
+                </a>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active" id="home3" role="tabpanel">
+                    <div class="row">
+                        {{ range .Pages }}
+                            {{ if in .Params.category "household-special"}}
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                                <div class="product-wrapper mb-45">
+                                    <div class="product-img">
+                                        <a href="{{ .RelPermalink }}">
+                                            <img src="{{ .Params.image }}" alt="">
+                                        </a>
+                                        <div class="product-action">
+                                            <div class="product-action-style">
+                                                <a class="action-plus" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                    <i class="ti-plus"></i>
+                                                </a>
+                                                <a class="action-heart" title="Wishlist" href="{{ .RelPermalink }}">
+                                                    <i class="ti-heart"></i>
+                                                </a>
+                                                <a class="action-cart" title="Add To Cart" href="{{ .RelPermalink }}">
+                                                    <i class="ti-shopping-cart"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-content text-center">
+                                        <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+                                        <div class="product-rating">
+                                            <i class="ion-ios-star"></i>
+                                            <i class="ion-ios-star"></i>
+                                            <i class="ion-ios-star"></i>
+                                            <i class="ion-ios-star"></i>
+                                            <i class="ion-ios-star"></i>
+                                        </div>
+                                        <div class="product-price">
+                                            <span class="old">{{ .Params.old_price }} </span>
+                                            <span>{{ .Params.price }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{ end }}
+                        {{ end }}
+                        {{ range .Pages }}
+                            {{ if in .Params.category "household"}}
                             <div class="col-md-6 col-lg-4 col-xl-3">
                                 <div class="product-wrapper mb-45">
                                     <div class="product-img">
