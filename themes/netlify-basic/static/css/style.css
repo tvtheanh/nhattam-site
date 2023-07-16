@@ -1025,9 +1025,9 @@ a.slider-btn:hover::before {
 }
 /* banner style */
 .banner-content-5 {
-    padding: 20px 100px;
+    padding: 20px 50px;
     position: absolute;
-    top: 50%;
+    top: 10%;
     transform: translateY(-50%);
 }
 .banner-content-5 > h4 {
