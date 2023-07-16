@@ -418,7 +418,7 @@
     font-weight: 400;
     margin-bottom: 12px;
 }
-.cart-title > span {
+.cart-title span {
     color: #f3a395;
     font-weight: 600;
 }
@@ -1098,7 +1098,7 @@ a.slider-btn:hover::before {
     top: 0;
 }
 .new-collection-content > h2 {
-    color: #5d5d5d;
+    color: #f3a395; /* #5d5d5d; */
     font-size: 23px;
     margin-bottom: 14px;
 }
