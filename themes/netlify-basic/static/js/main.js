@@ -50,7 +50,7 @@
     $('.slider-active').owlCarousel({
         loop: true,
         nav: true,
-        autoplay: false,
+        autoplay: true,
         autoplayTimeout: 5000,
         animateOut: 'fadeOut',
         animateIn: 'fadeIn',

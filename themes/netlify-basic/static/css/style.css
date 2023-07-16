@@ -1027,7 +1027,7 @@ a.slider-btn:hover::before {
 .banner-content-5 {
     padding: 20px 50px;
     position: absolute;
-    top: 10%;
+    top: 20%;
     transform: translateY(-50%);
 }
 .banner-content-5 > h4 {
