@@ -16,7 +16,7 @@
                     <h4> </h4>
                 </a>
                 <a class="active" href="#home2" data-toggle="tab" role="tab" aria-selected="false" aria-controls="home2">
-                    <h4> Chi tiết sản phẩm </h4>
+                    <h4 id="product-detail"> Chi tiết sản phẩm </h4>
                 </a>
                 <a data-toggle="tab" role="tab" aria-selected="false" aria-controls="home3">
                     <h4>  </h4>
@@ -27,8 +27,8 @@
                     <div class="offset-md-3 col-md-6 col-lg-6 col-xl-6">
                         <div class="product-wrapper mb-45">
                             <div class="product-img">
-                                <a href="#">
-                                    <img src="{{ .Params.image_lg }}" alt="">
+                                <a href="#product-detail">
+                                    <img src="{{ .Params.image_lg }}" alt="{{ .Params.title }}">
                                 </a>
                                 <div class="product-action">
                                     <div class="product-action-style">
