@@ -10,7 +10,7 @@
     
     /*====== sidebarCart ======*/
     function sidebarCart() {
-        var menuTrigger = $('button.sidebar-trigger'),
+        var menuTrigger = $('button.sidebar-trigger, a.sidebar-trigger'),
             endTrigger = $('button.op-sidebar-close'),
             container = $('.sidebar-cart'),
             wrapper = $('.wrapper');
